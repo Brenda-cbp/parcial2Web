@@ -12,13 +12,12 @@ function Login() {
                 </Col>
                 <Col>
                     <h1>Tu librería aliada </h1>
-
                     <Form>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Email address</Form.Label>
+                            <Form.Label>Username or Email</Form.Label>
                             <Form.Control type="email" placeholder="Enter email" />
                             <Form.Text className="text-muted">
-                                We'll never share your email with anyone else.
+                                ""
                             </Form.Text>
                         </Form.Group>
 
@@ -29,8 +28,9 @@ function Login() {
                         <Form.Group className="mb-3" controlId="formBasicCheckbox">
                             <Form.Check type="checkbox" label="Check me out" />
                         </Form.Group>
+                        <p> forgot password </p>
                         <Button variant="primary" type="submit">
-                            Submit
+                            Sign-in
                         </Button>
                     </Form>
                 </Col>
