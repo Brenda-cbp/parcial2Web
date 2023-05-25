@@ -3,14 +3,28 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+import { IntlProvider } from 'react-intl';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import messages_en from "./locales/en.json";
+import messages_es from "./locales/es.json";
+
+const messages = {
+  'en': messages_en,
+  'es': messages_es
+};
+
+const userLanguage = navigator.language || navigator.userLanguage;
+const defaultLocale = userLanguage.startsWith('es') ? 'es' : 'en';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <IntlProvider locale={defaultLocale} messages={messages}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </IntlProvider>
 );
 
 // If you want your app to work offline and load faster, you can change
