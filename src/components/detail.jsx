@@ -131,7 +131,6 @@ function Detail(props) {
                         {book.summary}
                     </p>
                 }
-                {console.log(rol)}
             </Row>
         </div >
     )
