@@ -1,11 +1,16 @@
 import { Button, Container } from 'react-bootstrap'
-import React, { useState } from 'react'
+import React, { createContext, useContext, useState } from 'react'
 import Col from 'react-bootstrap/esm/Col'
 import Row from 'react-bootstrap/esm/Row'
 import { Form } from "react-bootstrap";
 import "./styles.css"
 import { useNavigate } from 'react-router-dom';
 
+
+export const RolContext = createContext({
+    rol: {},
+    setRol: () => { }
+});
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -13,6 +18,8 @@ function Login() {
     const [passwordError, setPasswordError] = useState('');
     const [generalError, setgeneralError] = useState('');
     const navigate = useNavigate();
+    const { rol, setRol } = useContext(RolContext);
+
 
     const validateEmail = () => {
         if (!email) {
@@ -47,14 +54,12 @@ function Login() {
             });
             if (response.status === 200) {
                 const data = await response.json();
-                console.log(data, "JAJAJJA")
-                const { rol } = data;
+                console.log(data)
+                const rol = data;
+                setRol(rol);
                 navigate('/books');
             } else if (response.status === 401) {
                 setgeneralError('Invalid email or password');
-            } else {
-                // Handle other error cases
-                console.log('Error:', response.status);
             }
         } catch (error) {
             console.log('Error:', error);

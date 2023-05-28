@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
+import "./stylesBooks.css"
 
-function Detail({ props }) {
+function Detail(props) {
     const [book, setbook] = useState({})
     useEffect(() => {
         const URL =
@@ -22,11 +23,11 @@ function Detail({ props }) {
                 setbook(data);
                 console.log(data)
             });
-    }, []);
+    }, [props.id]);
 
     return (
         <div>
-            <h1> {book.title}</h1>
+            <h2> {book.name}</h2>
             <hr />
             <Row>
                 <Col sm={6} md={6} lg={6} xl={6} >
@@ -73,7 +74,7 @@ function Detail({ props }) {
                     <b>Available online </b>
                 </Col>
                 <Col sm={6} md={6} lg={6} xl={6}>
-                    {book.available_online}
+                    {book.available_online ? "Yes" : "No"}
                 </Col>
             </Row>
             <Row>
@@ -88,11 +89,9 @@ function Detail({ props }) {
                 <Col sm={6} md={6} lg={6} xl={6} >
                     <b>Summary </b>
                 </Col>
-                <Col sm={6} md={6} lg={6} xl={6}>
-                    {book.summary}
-                </Col>
+                <p>{book.summary} </p>
             </Row>
-        </div>
+        </div >
     )
 }
 
