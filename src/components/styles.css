@@ -81,3 +81,8 @@ button {
 .login {
     box-shadow: 10px 10px 30px -7px rgba(0, 0, 0, 0.75);
 }
+
+.error-message {
+    color: red;
+    font-size: small;
+}
