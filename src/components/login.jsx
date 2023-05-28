@@ -6,11 +6,6 @@ import { Form } from "react-bootstrap";
 import "./styles.css"
 import { useNavigate } from 'react-router-dom';
 
-
-export const RolContext = createContext({
-    rol: {},
-    setRol: () => { }
-});
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -18,7 +13,6 @@ function Login() {
     const [passwordError, setPasswordError] = useState('');
     const [generalError, setgeneralError] = useState('');
     const navigate = useNavigate();
-    const { rol, setRol } = useContext(RolContext);
 
 
     const validateEmail = () => {
@@ -55,9 +49,9 @@ function Login() {
             if (response.status === 200) {
                 const data = await response.json();
                 console.log(data)
-                const rol = data;
-                setRol(rol);
-                navigate('/books');
+                const rol = data.rol;
+                console.log(rol)
+                navigate('/books', { state: { rol } });
             } else if (response.status === 401) {
                 setgeneralError('Invalid email or password');
             }
@@ -75,6 +69,7 @@ function Login() {
         }
     };
     return (
+
         <Container className="container">
             <div className="login container-fluid" style={{ backgroundColor: "white" }}>
                 <Row>

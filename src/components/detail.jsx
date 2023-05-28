@@ -5,6 +5,7 @@ import "./stylesBooks.css"
 
 function Detail(props) {
     const [book, setbook] = useState({})
+    const rol = props.rol
     useEffect(() => {
         const URL =
             "http://localhost:3000/books/" + props.id;
@@ -16,7 +17,6 @@ function Detail(props) {
                     'Content-Type': 'application/json',
                 }
             }
-
         )
             .then((data) => data.json())
             .then((data) => {
@@ -34,7 +34,12 @@ function Detail(props) {
                     <b>ISBN</b>
                 </Col>
                 <Col sm={6} md={6} lg={6} xl={6}>
-                    {book.isbn}
+                    {rol == "Administrador" ? <input placeholder={book.isbn}
+                    /> :
+                        <p>
+                            {book.isbn}
+                        </p>
+                    }
                 </Col>
             </Row>
             <Row>
@@ -42,7 +47,12 @@ function Detail(props) {
                     <b>Author</b>
                 </Col>
                 <Col sm={6} md={6} lg={6} xl={6}>
-                    {book.isbn}
+                    {rol == "Administrador" ? <input placeholder={book.isbn}
+                    /> :
+                        <p>
+                            {book.isbn}
+                        </p>
+                    }
                 </Col>
             </Row>
             <Row>
@@ -50,7 +60,12 @@ function Detail(props) {
                     <b>Publisher</b>
                 </Col>
                 <Col sm={6} md={6} lg={6} xl={6}>
-                    {book.publisher}
+                    {rol == "Administrador" ? <input placeholder={book.publisher}
+                    /> :
+                        <p>
+                            {book.publisher}
+                        </p>
+                    }
                 </Col>
             </Row>
             <Row>
@@ -58,7 +73,12 @@ function Detail(props) {
                     <b>Genre</b>
                 </Col>
                 <Col sm={6} md={6} lg={6} xl={6}>
-                    {book.gender}
+                    {rol == "Administrador" ? <input placeholder={book.gender}
+                    /> :
+                        <p>
+                            {book.gender}
+                        </p>
+                    }
                 </Col>
             </Row>
             <Row>
@@ -66,7 +86,12 @@ function Detail(props) {
                     <b>Year</b>
                 </Col>
                 <Col sm={6} md={6} lg={6} xl={6}>
-                    {book.year}
+                    {rol == "Administrador" ? <input placeholder={book.year}
+                    /> :
+                        <p>
+                            {book.year}
+                        </p>
+                    }
                 </Col>
             </Row>
             <Row>
@@ -74,7 +99,12 @@ function Detail(props) {
                     <b>Available online </b>
                 </Col>
                 <Col sm={6} md={6} lg={6} xl={6}>
-                    {book.available_online ? "Yes" : "No"}
+                    {rol == "Administrador" ?
+                        <input placeholder={book.available_online ? "Yes" : "No"} /> :
+                        <p>
+                            {book.available_online ? "Yes" : "No"}
+                        </p>
+                    }
                 </Col>
             </Row>
             <Row>
@@ -82,14 +112,26 @@ function Detail(props) {
                     <b>Price </b>
                 </Col>
                 <Col sm={6} md={6} lg={6} xl={6}>
-                    {book.price}
+                    {rol == "Administrador" ? <input placeholder=
+                        {book.price}
+                    /> :
+                        <p>
+                            {book.price}
+                        </p>
+                    }
                 </Col>
             </Row>
             <Row>
                 <Col sm={6} md={6} lg={6} xl={6} >
                     <b>Summary </b>
                 </Col>
-                <p>{book.summary} </p>
+                {rol == "Administrador" ? <textarea placeholder={book.summary} rows={8}  ></textarea>
+                    :
+                    <p>
+                        {book.summary}
+                    </p>
+                }
+                {console.log(rol)}
             </Row>
         </div >
     )
