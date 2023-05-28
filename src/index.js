@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import { IntlProvider } from 'react-intl';
 import reportWebVitals from './reportWebVitals';
@@ -9,6 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import messages_en from "./locales/en.json";
 import messages_es from "./locales/es.json";
+import { BrowserRouter } from 'react-router-dom';
+import CreateRoutes from './routes/routes';
 
 const messages = {
   'en': messages_en,
@@ -22,7 +23,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <IntlProvider locale={defaultLocale} messages={messages}>
     <React.StrictMode>
-      <App />
+      <BrowserRouter>
+        <CreateRoutes />
+      </BrowserRouter>
     </React.StrictMode>
   </IntlProvider>
 );
