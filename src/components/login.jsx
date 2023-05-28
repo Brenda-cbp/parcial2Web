@@ -4,12 +4,15 @@ import Col from 'react-bootstrap/esm/Col'
 import Row from 'react-bootstrap/esm/Row'
 import { Form } from "react-bootstrap";
 import "./styles.css"
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
+    const [generalError, setgeneralError] = useState('');
+    const navigate = useNavigate();
 
     const validateEmail = () => {
         if (!email) {
@@ -32,13 +35,38 @@ function Login() {
         }
     };
 
-    const handleSubmit = (e) => {
+
+    const login = async () => {
+        try {
+            const response = await fetch('http://localhost:3000/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, password })
+            });
+            if (response.status === 200) {
+                const data = await response.json();
+                console.log(data, "JAJAJJA")
+                const { rol } = data;
+                navigate('/books');
+            } else if (response.status === 401) {
+                setgeneralError('Invalid email or password');
+            } else {
+                // Handle other error cases
+                console.log('Error:', response.status);
+            }
+        } catch (error) {
+            console.log('Error:', error);
+        }
+    }
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
         validateEmail();
         validatePassword();
         if (!emailError && !passwordError) {
-            // Perform login or other actions
-            console.log('Login successful');
+            await login();
         }
     };
     return (
@@ -50,7 +78,7 @@ function Login() {
                     </Col>
                     <Col className='login-form'>
                         <h1>Tu librería Aliada</h1>
-
+                        {generalError && <div className="error-message">{generalError}</div>}
                         <Form onSubmit={handleSubmit}>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label className='label-form'>Username or Email</Form.Label>
