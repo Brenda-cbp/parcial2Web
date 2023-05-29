@@ -8,7 +8,7 @@ function Detail(props) {
     const intl = useIntl();
     const [book, setbook] = useState({})
     const rol = props.rol
-    const placeholderText = book.available_online ? intl.formatMessage({ id: 'yes' }) : 'No';
+    const valueText = book.available_online ? intl.formatMessage({ id: 'yes' }) : 'No';
 
     useEffect(() => {
         const URL =
@@ -37,7 +37,7 @@ function Detail(props) {
                     <b><FormattedMessage id="isbn" /></b>
                 </Col>
                 <Col sm={6} md={6} lg={6} xl={6}>
-                    {rol === "Administrador" ? <input placeholder={book.isbn} /> :
+                    {rol === "Administrador" ? <input value={book.isbn} /> :
                         <p>{book.isbn} </p>}
                 </Col>
             </Row>
@@ -46,7 +46,7 @@ function Detail(props) {
                     <b><FormattedMessage id="author" /></b>
                 </Col>
                 <Col sm={6} md={6} lg={6} xl={6}>
-                    {rol === "Administrador" ? <input placeholder={book.author} /> :
+                    {rol === "Administrador" ? <input value={book.author} /> :
                         <p> {book.author}</p>
                     }
                 </Col>
@@ -56,7 +56,7 @@ function Detail(props) {
                     <b><FormattedMessage id="publisher" /></b>
                 </Col>
                 <Col sm={6} md={6} lg={6} xl={6}>
-                    {rol === "Administrador" ? <input placeholder={book.publisher} /> :
+                    {rol === "Administrador" ? <input value={book.publisher} /> :
                         <p>
                             {book.publisher}
                         </p>
@@ -68,7 +68,7 @@ function Detail(props) {
                     <b><FormattedMessage id="genre" /></b>
                 </Col>
                 <Col sm={6} md={6} lg={6} xl={6}>
-                    {rol === "Administrador" ? <input placeholder={book.gender} /> :
+                    {rol === "Administrador" ? <input value={book.gender} /> :
                         <p>
                             {book.gender}
                         </p>
@@ -80,7 +80,7 @@ function Detail(props) {
                     <b><FormattedMessage id="year" /></b>
                 </Col>
                 <Col sm={6} md={6} lg={6} xl={6}>
-                    {rol === "Administrador" ? <input placeholder={book.year} /> :
+                    {rol === "Administrador" ? <input value={book.year} /> :
                         <p>
                             {book.year}
                         </p>
@@ -94,7 +94,7 @@ function Detail(props) {
                 <Col sm={6} md={6} lg={6} xl={6}>
 
                     {rol === "Administrador" ?
-                        <input placeholder={placeholderText} /> :
+                        <input value={valueText} /> :
                         <p>
                             {book.available_online ? <FormattedMessage id="yes" /> : "No"}
                         </p>
@@ -107,7 +107,7 @@ function Detail(props) {
                     <b><FormattedMessage id="price" /></b>
                 </Col>
                 <Col sm={6} md={6} lg={6} xl={6}>
-                    {rol === "Administrador" ? <input placeholder={book.price} /> :
+                    {rol === "Administrador" ? <input value={book.price} /> :
                         <p>
                             {book.price}
                         </p>
@@ -118,7 +118,7 @@ function Detail(props) {
                 <Col sm={6} md={6} lg={6} xl={6} >
                     <b><FormattedMessage id="summary" /></b>
                 </Col>
-                {rol === "Administrador" ? <textarea placeholder={book.summary} rows={8}  ></textarea>
+                {rol === "Administrador" ? <textarea value={book.summary} rows={8}  ></textarea>
                     :
                     <p>
                         {book.summary}
