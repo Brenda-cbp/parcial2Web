@@ -4,7 +4,8 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Detail from './detail';
 import "./stylesBooks.css"
-import { Route, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
 
 function Books() {
 
@@ -26,7 +27,6 @@ function Books() {
             .then((data) => data.json())
             .then((data) => {
                 setListBooks(data);
-                console.log(data)
             });
     }, []);
 
@@ -46,7 +46,7 @@ function Books() {
                                             <Card.Body>
                                                 <Card.Title>{book.name}</Card.Title>
                                                 <Card.Text>
-                                                    {"ISBN: " + book.isbn}
+                                                    <FormattedMessage id="isbn" /> {book.isbn}
                                                 </Card.Text>
                                             </Card.Body>
                                         </Card>

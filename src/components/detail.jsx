@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
+import { FormattedMessage, useIntl } from 'react-intl';
 import "./stylesBooks.css"
 
 function Detail(props) {
+    const intl = useIntl();
     const [book, setbook] = useState({})
     const rol = props.rol
+    const placeholderText = book.available_online
+        ? intl.formatMessage({ id: 'yes' })
+        : 'No';
     useEffect(() => {
         const URL =
             "http://localhost:3000/books/" + props.id;
@@ -31,37 +36,29 @@ function Detail(props) {
             <hr />
             <Row>
                 <Col sm={6} md={6} lg={6} xl={6} >
-                    <b>ISBN</b>
+                    <b><FormattedMessage id="isbn" /></b>
                 </Col>
                 <Col sm={6} md={6} lg={6} xl={6}>
-                    {rol == "Administrador" ? <input placeholder={book.isbn}
-                    /> :
-                        <p>
-                            {book.isbn}
-                        </p>
+                    {rol === "Administrador" ? <input placeholder={book.isbn} /> :
+                        <p>{book.isbn} </p>}
+                </Col>
+            </Row>
+            <Row>
+                <Col sm={6} md={6} lg={6} xl={6} >
+                    <b><FormattedMessage id="author" /></b>
+                </Col>
+                <Col sm={6} md={6} lg={6} xl={6}>
+                    {rol === "Administrador" ? <input placeholder={book.author} /> :
+                        <p> {book.author}</p>
                     }
                 </Col>
             </Row>
             <Row>
                 <Col sm={6} md={6} lg={6} xl={6} >
-                    <b>Author</b>
+                    <b><FormattedMessage id="publisher" /></b>
                 </Col>
                 <Col sm={6} md={6} lg={6} xl={6}>
-                    {rol == "Administrador" ? <input placeholder={book.isbn}
-                    /> :
-                        <p>
-                            {book.isbn}
-                        </p>
-                    }
-                </Col>
-            </Row>
-            <Row>
-                <Col sm={6} md={6} lg={6} xl={6} >
-                    <b>Publisher</b>
-                </Col>
-                <Col sm={6} md={6} lg={6} xl={6}>
-                    {rol == "Administrador" ? <input placeholder={book.publisher}
-                    /> :
+                    {rol === "Administrador" ? <input placeholder={book.publisher} /> :
                         <p>
                             {book.publisher}
                         </p>
@@ -70,11 +67,10 @@ function Detail(props) {
             </Row>
             <Row>
                 <Col sm={6} md={6} lg={6} xl={6} >
-                    <b>Genre</b>
+                    <b><FormattedMessage id="genre" /></b>
                 </Col>
                 <Col sm={6} md={6} lg={6} xl={6}>
-                    {rol == "Administrador" ? <input placeholder={book.gender}
-                    /> :
+                    {rol === "Administrador" ? <input placeholder={book.gender} /> :
                         <p>
                             {book.gender}
                         </p>
@@ -83,11 +79,10 @@ function Detail(props) {
             </Row>
             <Row>
                 <Col sm={6} md={6} lg={6} xl={6} >
-                    <b>Year</b>
+                    <b><FormattedMessage id="year" /></b>
                 </Col>
                 <Col sm={6} md={6} lg={6} xl={6}>
-                    {rol == "Administrador" ? <input placeholder={book.year}
-                    /> :
+                    {rol === "Administrador" ? <input placeholder={book.year} /> :
                         <p>
                             {book.year}
                         </p>
@@ -96,25 +91,25 @@ function Detail(props) {
             </Row>
             <Row>
                 <Col sm={6} md={6} lg={6} xl={6} >
-                    <b>Available online </b>
+                    <b><FormattedMessage id="available_online" /></b>
                 </Col>
                 <Col sm={6} md={6} lg={6} xl={6}>
-                    {rol == "Administrador" ?
-                        <input placeholder={book.available_online ? "Yes" : "No"} /> :
+
+                    {rol === "Administrador" ?
+                        <input placeholder={placeholderText} /> :
                         <p>
-                            {book.available_online ? "Yes" : "No"}
+                            {book.available_online ? <FormattedMessage id="yes" /> : "No"}
                         </p>
                     }
+
                 </Col>
             </Row>
             <Row>
                 <Col sm={6} md={6} lg={6} xl={6} >
-                    <b>Price </b>
+                    <b><FormattedMessage id="price" /></b>
                 </Col>
                 <Col sm={6} md={6} lg={6} xl={6}>
-                    {rol == "Administrador" ? <input placeholder=
-                        {book.price}
-                    /> :
+                    {rol === "Administrador" ? <input placeholder={book.price} /> :
                         <p>
                             {book.price}
                         </p>
@@ -123,9 +118,9 @@ function Detail(props) {
             </Row>
             <Row>
                 <Col sm={6} md={6} lg={6} xl={6} >
-                    <b>Summary </b>
+                    <b><FormattedMessage id="summary" /></b>
                 </Col>
-                {rol == "Administrador" ? <textarea placeholder={book.summary} rows={8}  ></textarea>
+                {rol === "Administrador" ? <textarea placeholder={book.summary} rows={8}  ></textarea>
                     :
                     <p>
                         {book.summary}

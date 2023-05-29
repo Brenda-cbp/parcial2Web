@@ -1,5 +1,5 @@
 import { Button, Container } from 'react-bootstrap'
-import React, { createContext, useContext, useState } from 'react'
+import React, { useState } from 'react'
 import Col from 'react-bootstrap/esm/Col'
 import Row from 'react-bootstrap/esm/Row'
 import { Form } from "react-bootstrap";
@@ -48,9 +48,7 @@ function Login() {
             });
             if (response.status === 200) {
                 const data = await response.json();
-                console.log(data)
                 const rol = data.rol;
-                console.log(rol)
                 navigate('/books', { state: { rol } });
             } else if (response.status === 401) {
                 setgeneralError('Invalid email or password');

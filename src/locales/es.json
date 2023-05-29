@@ -1,4 +1,12 @@
 {
     "loginTitle": "Your Library ",
-    "ISBN": "ISBN"
+    "author": "Autor",
+    "isbn": "ISBN",
+    "publisher": "Editor",
+    "genre": "Género",
+    "year": "Año",
+    "available_online": "Disponible Online",
+    "price": "Precio",
+    "summary": "Resumen",
+    "yes": "Sí"
 }
