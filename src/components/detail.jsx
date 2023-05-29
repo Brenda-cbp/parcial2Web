@@ -25,7 +25,6 @@ function Detail(props) {
             .then((data) => data.json())
             .then((data) => {
                 setbook(data);
-                console.log(data)
             });
     }, [props.id]);
 

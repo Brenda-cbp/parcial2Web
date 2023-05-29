@@ -40,7 +40,7 @@ function Books() {
                         {listbooks.map((book, i) => {
                             return (
                                 <Col sm={4} md={4} lg={4} xl={4} key={i}>
-                                    <Card className='cardBook' onClick={() => { setId(book.id); console.log(idBook) }}>
+                                    <Card className='cardBook' onClick={() => { setId(book.id) }}>
                                         <Card >
                                             <Card.Img variant="top" src={book.image} />
                                             <Card.Body>

@@ -22,7 +22,6 @@ const defaultLocale = userLanguage.startsWith('es') ? 'es' : 'en';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <IntlProvider locale={defaultLocale} messages={messages[defaultLocale]}>
-    {console.log(defaultLocale)}
     <React.StrictMode>
       <BrowserRouter>
         <CreateRoutes />
