@@ -43,8 +43,37 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente en tu sistema:
 - En la traducción de "Forgot password?" se decidió traducir esto por "Recuperar contraseña".
 
 ### Proceso: 
-A continuación se mostrarán los resultados y los casos que se manejaron en la página. Primero se mostrarán los Resultados en Español, y luego en Ingles. 
-#### Log-in
+A continuación se mostrarán los resultados y los casos que se manejaron en la página. Primero se mostrarán los Resultados en Inglés, y luego en Español. 
+#### Log-in : Inglés
+![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/5ed15180-b96e-4625-b327-28bbd2d5e727)
+![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/24458a57-3984-4f7b-8eaa-5addc18faa25)
+![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/e2b50309-09d2-41d3-a6aa-4ea1fe478dec)
+
+#### HomePage : Inglés
+![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/1501afdd-2bd7-4c30-b937-569e3d224687)
+##### HomePage para rol No administrativo : Inglés
+![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/fc491740-354e-4fc9-a09d-54afc12529a6)
+![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/be618c61-533d-482e-bd7c-851e3dae81c3)
+##### Homepage para rol administrativo : Inglés
+![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/ac13d3ef-68f9-4777-8142-3628c72cf47f)
+![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/6e9922ac-7230-433f-843e-fc4d6f194dfa)
+
+#### Log-in : Español 
+![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/f0add610-03a5-4cd5-8614-04d92fb82c8b)
+![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/c24862dc-d34c-4f18-96a9-d471b710f1da)
+![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/536451c1-e255-455e-8f84-4b333d6b3c65)
+
+#### HomaPage : Español
+![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/833ad3bd-2959-439b-9a9d-e6345ac30f34)
+##### Homepage para rol No administrativo : Español
+![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/a7fedfb8-a54c-4346-869a-a190ec4733da)
+![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/d1c97756-86ba-479b-ba7b-92b5364495ec)
+##### Homepage para rol administrativo : Español
+![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/44f94cbf-6ec6-4857-89b7-8c216b45aecc)
+![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/0f904488-afb0-400f-9f6d-ac0434d6830f)
+
+
+
 
 ## Descripción
 Para el desarrollo de la aplicación se hizo uso de los siguientes componentes y elementos: 
