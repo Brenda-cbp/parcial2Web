@@ -65,11 +65,11 @@ Vista en Inglés con el detalle de un libro que tiene "Available_onile" en **tru
 ![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/be618c61-533d-482e-bd7c-851e3dae81c3)
 
 ##### Homepage para rol administrativo : Inglés
-Note que, al ser el Rol Administrativo, la información se muestra a manera de input para que esta se pueda editar 
+Note que, al ser el Rol Administrativo, la información se muestra a manera de input para que esta se pueda editar (también se puede notar el cursor para editar en las imagenes)
 Vista en Inglés con el detalle de un libro que tiene "Available_onile" en **false. (se muestra No)** Esta vista es para un **administrativo**:
-![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/ac13d3ef-68f9-4777-8142-3628c72cf47f)
+![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/2bd9282a-6326-4140-a3f2-b2dc31b138a2)
 Vista en Inglés con el detalle de un libro que tiene "Available_onile" en **true. (se muestra Yes)** Esta vista es para un **administrativo**:
-![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/6e9922ac-7230-433f-843e-fc4d6f194dfa)
+![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/22aae9c1-fed9-4810-aa6b-d5d4f9cd95be)
 
 #### Log-in : Español 
 Inicio de la página Login en Español:
@@ -90,11 +90,11 @@ Vista en Español con el detalle de un libro que tiene "Available_onile" en **tr
 ![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/d1c97756-86ba-479b-ba7b-92b5364495ec)
 
 ##### Homepage para rol administrativo : Español
-Note que, al ser el Rol Administrativo, la información se muestra a manera de input para que esta se pueda editar 
+Note que, al ser el Rol Administrativo, la información se muestra a manera de input para que esta se pueda editar (también se puede notar el cursor para editar en las imagenes).
 Vista en Español con el detalle de un libro que tiene "Available_onile" en **false. (se muestra No)** Esta vista es para un **administrativo**:
-![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/44f94cbf-6ec6-4857-89b7-8c216b45aecc)
+![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/05c5e28d-3343-4ff3-8a40-932734a06909)
 Vista en Español con el detalle de un libro que tiene "Available_onile" en **true. (se muestra Sí)** Esta vista es para un **administrativo**:
-![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/0f904488-afb0-400f-9f6d-ac0434d6830f)
+![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/e4e36fd9-4dbc-4a3a-8182-d1588f2db736)
 
 
 ## Descripción
