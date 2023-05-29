@@ -38,18 +38,24 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente en tu sistema:
 3. En el proceso de internacionalización se decidió manejar 2 idiomas, Ingles y Español.
 4. Para este mismo proceso (internacionalización) se dejaron nombres intactos los nombres propios, como "Tu Librería Aliada".
 5. Para el manejo del Rol, se hace uso de los paramétros entre componentes.
+6. Se hacen pequeños cambios para que la aplicación tenga sentido por ejemplo: 
+- Para el login, se deja solo como label "Email" o "Correo electrónico", según el idioma que corresponda (es decir,no se especifica el "username"). Esto debido a que en el enunciado se pide realizar una validación únicamente del email y no del user name, de igual manera, en el back solo se recibe el email. Por este motivo no se siguó el mockup original y no se tuvo en cuenta el username.
+- En la traducción de "Forgot password?" se decidió traducir esto por "Recuperar contraseña".
 
 ### Proceso: 
 
 
 ## Descripción
 Para el desarrollo de la aplicación se hizo uso de los siguientes componentes y elementos: 
-* Uso del hook de estado en react para el manejo de variables. (useState)
-* Uso del hook de efecto para hacer las peticiones al Back cuando se renderiza el componente. (useEffect)
+* Uso del hook de estado en react para el manejo de variables. (useState): Se usa para el manejo de variables como los errores de los formularios, los inputs de los formularios, las variables como la lista de libros y la información de un libro en específico)
+* Uso del hook de efecto para hacer las peticiones al Back cuando se renderiza el componente. (useEffect). Se utiliza en los componentes "book" y "detail". Esto para hacer los llamados al back para obtener la lista de libros y el detalle de libro escogido. Este hook se ejecuta después de que el componente se ha renderizado en el DOM.
 * Uso de React router para el manejo de las rutas. (useNavigate, useLocation, Route, Routes) 
-* Uso componentes de react-bootstrap para el manejo de componentes responsivos de la aplicación. (Col, Row, Container, Button, Form, Card)
+* Uso componentes de react-bootstrap para el manejo de componentes responsivos de la aplicación. (Col, Row, Container, Button, Form, Card). Se utilizaron estos componentes para seguir lo indicado en el enunciado sobre como se debería ver el front)
 * Uso de componentes de la librería "react-intl" para realizar todo el proceso de internacionalización. (IntlProvider, FormattedMessage, useIntl)
-* Uso de navigator para la obtención del idoma configurado en el Explorador. 
+1. El primero se utiliza en el archivo Index.js para encapsular los componentes, especificar el lenguaje y el archivo de mensajes que se debe leer. 
+2. El segundo se usa para reemplazar el texto estático y reemplazarlo según el idioma que se esté manejando en el navegador. Para esto se usa un "id", y este se busca en el .json del lenguaje correspondiente. 
+3. El último se utiliza para obtener, segun el id, la traduccion o valor correspondiente que se encuentra en el .json del lenguaje a traducir. La diferencia con el segundo, esque este no es como tal un componente que se renderiza. Este se usa cuando no se puede utilizar el segundo componente descrito, porque, si se llegara a utilizar, se obtendría un "[object:Object]". Este último componente se utiliza para la obtencion de los mensajes de error del formulario en el archivo 
+* Uso de navigator para la obtención del idoma configurado en el Explorador. Esto se utiliza en el archivo Index.js de la siguiente manera ```userLanguage = navigator.language || navigator.userLanguage;```
 
 
 
