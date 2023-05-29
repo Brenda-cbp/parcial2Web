@@ -65,7 +65,7 @@ Vista en Inglés con el detalle de un libro que tiene "Available_onile" en **tru
 ![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/be618c61-533d-482e-bd7c-851e3dae81c3)
 
 ##### Homepage para rol administrativo : Inglés
-Note que, al ser el Rol Administrativo, la información se muestra a manera de input para que esta se pueda editar (también se puede notar el cursor para editar en las imagenes)
+Note que, al ser el Rol Administrativo, la información se muestra a manera de input para que esta se pueda editar (también se puede notar el cursor para editar en las imagenes).
 Vista en Inglés con el detalle de un libro que tiene "Available_onile" en **false. (se muestra No)** Esta vista es para un **administrativo**:
 ![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/2bd9282a-6326-4140-a3f2-b2dc31b138a2)
 Vista en Inglés con el detalle de un libro que tiene "Available_onile" en **true. (se muestra Yes)** Esta vista es para un **administrativo**:
