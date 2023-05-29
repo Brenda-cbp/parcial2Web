@@ -83,7 +83,7 @@ function Login() {
                         <img src='https://img.freepik.com/vector-premium/patron-costura-vectorial-libros-dibujos-animados-sobre-fondo-verde_574806-549.jpg?w=2000' alt="Library" />
                     </Col>
                     <Col className='login-form'>
-                        <h1>Tu librería Aliada</h1>
+                        <h1>Tu Librería Aliada</h1>
                         {generalError && <div className="error-message">{generalError}</div>}
                         <Form onSubmit={handleSubmit}>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
