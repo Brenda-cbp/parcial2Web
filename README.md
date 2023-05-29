@@ -43,7 +43,13 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente en tu sistema:
 
 
 ## Descripción
+Para el desarrollo de la aplicación se hizo uso de los siguientes componentes y elementos: 
+* Uso del hook de estado en react para el manejo de variables. (useState)
+* Uso del hook de efecto para hacer las peticiones al Back cuando se renderiza el componente. (useEffect)
+* Uso de React router para el manejo de las rutas. (useNavigate, useLocation, Route, Routes) 
+* Uso componentes de react-bootstrap para el manejo de componentes responsivos de la aplicación. (Col, Row, Container, Button, Form, Card)
+* Uso de componentes de la librería "react-intl" para realizar todo el proceso de internacionalización. (IntlProvider, FormattedMessage, useIntl)
+* Uso de navigator para la obtención del idoma configurado en el Explorador. 
 
-Aquí puedes escribir la conclusión.
 
 
