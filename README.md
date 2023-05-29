@@ -17,9 +17,9 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente en tu sistema:
 
 
 ### Instalación 
-1. Clona el repositorio actual: ```git clone https://github.com/Brenda-cbp/parcial2Web.git```
-2. Ve a la carpeta "/parcial2".
-3. Corre ```npm i``` en la terminal.
+1. Clonar el repositorio actual: ```git clone https://github.com/Brenda-cbp/parcial2Web.git```
+2. Ir a la carpeta "/parcial2".
+3. Correr ```npm i``` en la terminal.
 4. Luego, ```npm start``` . Esto corre la aplicación en "development mode".
 
 ## Detalles
@@ -30,6 +30,11 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente en tu sistema:
   - Existía la posibilidad de que, por tantas peticiones al tiempo (en el tiempo del parcial), el back se cayera. 
   - En el despliegue, y al leer las URLs, aparecía un problema de CORS, para el cual se tuvo que descargar el repo del back en local y modificarlo. (Esta modificación se mencionó en los prerequisitos de este README.
 2. El proyecto sigue la siguiente estructura destacable: 
+  - Los componentes y los .css de los estilos manejados se encuentran en la carpeta "Components"
+  - Los archivos para manejar la internacionalización se encuentran en la carpeta "locales"
+  - El archivo donde se declaran las rutas se encuentra en la carpeta "routes"
+  - Se eliminan los archivos App.js y App.css. 
+  - Se hace uso de Index.js donde se llaman las rutas declaradas anteriormente.
 3. En el proceso de internacionalización se decidió manejar 2 idiomas, Ingles y Español.
 4. Para este mismo proceso (internacionalización) se dejaron nombres intactos los nombres propios, como "Tu Librería Aliada".
 5. Para el manejo del Rol, se hace uso de los paramétros entre componentes.
