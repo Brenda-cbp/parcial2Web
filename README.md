@@ -43,36 +43,58 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente en tu sistema:
 - En la traducción de "Forgot password?" se decidió traducir esto por "Recuperar contraseña".
 
 ### Proceso: 
-A continuación se mostrarán los resultados y los casos que se manejaron en la página. Primero se mostrarán los Resultados en Inglés, y luego en Español. 
+En las secciones anterioes y en la sección siguiente, se habla sobre las decisiones, componenes que se usaron y diseño. Todo esto fue el proceso para la realización del parcial. Sin embargo, primero se decidió comenzar por la construcción de los componentes de Books y Detail, luego se realizó el forms, junto con sus validaciones. Se probó todo y luego se hizo el manejo de los roles. Finalmente, se realizaron ajustes en los css y se realizó todo el proceso de internacionalización. 
+
+En esta sección, se evitará hacer repetición de lo ya mencionado en este README, por lo que se mostrarán los resultados y los casos que se manejaron en la página. Primero se mostrarán los Resultados en Inglés, y luego en Español. 
+Antes de cada imagen se muestra una pequeña descripción con más información.
 #### Log-in : Inglés
+Inicio de la página Login en Inglés:
 ![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/5ed15180-b96e-4625-b327-28bbd2d5e727)
+Inicio de la página Login en Inglés con errores por campos de Email y Contraseña vacíos:
 ![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/24458a57-3984-4f7b-8eaa-5addc18faa25)
+Inicio de la página Login en Inglés con errores por no cumplir validaciones o reglas establecidas (formato de email y largo de la contraseña):
 ![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/e2b50309-09d2-41d3-a6aa-4ea1fe478dec)
 
 #### HomePage : Inglés
+HomePage en Inglés, después de hacer login satisfactoriamente:
 ![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/1501afdd-2bd7-4c30-b937-569e3d224687)
 ##### HomePage para rol No administrativo : Inglés
+Vista en Inglés con el detalle de un libro que tiene "Available_onile" en **false. (se muestra No)** Esta vista es para un **NO** administrativo:
 ![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/fc491740-354e-4fc9-a09d-54afc12529a6)
+Vista en Inglés con el detalle de un libro que tiene "Available_onile" en **true. (se muestra Yes)** Esta vista es para un **NO** administrativo:
 ![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/be618c61-533d-482e-bd7c-851e3dae81c3)
+
 ##### Homepage para rol administrativo : Inglés
+Note que, al ser el Rol Administrativo, la información se muestra a manera de input para que esta se pueda editar 
+Vista en Inglés con el detalle de un libro que tiene "Available_onile" en **false. (se muestra No)** Esta vista es para un **administrativo**:
 ![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/ac13d3ef-68f9-4777-8142-3628c72cf47f)
+Vista en Inglés con el detalle de un libro que tiene "Available_onile" en **true. (se muestra Yes)** Esta vista es para un **administrativo**:
 ![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/6e9922ac-7230-433f-843e-fc4d6f194dfa)
 
 #### Log-in : Español 
+Inicio de la página Login en Español:
 ![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/f0add610-03a5-4cd5-8614-04d92fb82c8b)
+Inicio de la página Login en Español con errores por campos de Email y Contraseña vacíos:
 ![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/c24862dc-d34c-4f18-96a9-d471b710f1da)
+Inicio de la página Login en Español con errores por no cumplir validaciones o reglas establecidas (formato de email y largo de la contraseña):
 ![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/536451c1-e255-455e-8f84-4b333d6b3c65)
 
 #### HomaPage : Español
+HomePage en Español, después de hacer login satisfactoriamente:
 ![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/833ad3bd-2959-439b-9a9d-e6345ac30f34)
+
 ##### Homepage para rol No administrativo : Español
+Vista en Español con el detalle de un libro que tiene "Available_onile" en **false. (se muestra No)** Esta vista es para un **NO** administrativo:
 ![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/a7fedfb8-a54c-4346-869a-a190ec4733da)
+Vista en Español con el detalle de un libro que tiene "Available_onile" en **true. (se muestra Sí)** Esta vista es para un **NO** administrativo:
 ![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/d1c97756-86ba-479b-ba7b-92b5364495ec)
+
 ##### Homepage para rol administrativo : Español
+Note que, al ser el Rol Administrativo, la información se muestra a manera de input para que esta se pueda editar 
+Vista en Español con el detalle de un libro que tiene "Available_onile" en **false. (se muestra No)** Esta vista es para un **administrativo**:
 ![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/44f94cbf-6ec6-4857-89b7-8c216b45aecc)
+Vista en Español con el detalle de un libro que tiene "Available_onile" en **true. (se muestra Sí)** Esta vista es para un **administrativo**:
 ![image](https://github.com/Brenda-cbp/parcial2Web/assets/60158853/0f904488-afb0-400f-9f6d-ac0434d6830f)
-
-
 
 
 ## Descripción
