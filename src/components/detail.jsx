@@ -8,9 +8,8 @@ function Detail(props) {
     const intl = useIntl();
     const [book, setbook] = useState({})
     const rol = props.rol
-    const placeholderText = book.available_online
-        ? intl.formatMessage({ id: 'yes' })
-        : 'No';
+    const placeholderText = book.available_online ? intl.formatMessage({ id: 'yes' }) : 'No';
+
     useEffect(() => {
         const URL =
             "http://localhost:3000/books/" + props.id;

@@ -5,8 +5,11 @@ import Row from 'react-bootstrap/esm/Row'
 import { Form } from "react-bootstrap";
 import "./styles.css"
 import { useNavigate } from 'react-router-dom';
+import { FormattedMessage, useIntl } from 'react-intl';
+
 
 function Login() {
+    const intl = useIntl();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
@@ -14,13 +17,18 @@ function Login() {
     const [generalError, setgeneralError] = useState('');
     const navigate = useNavigate();
 
+    const required_email = intl.formatMessage({ id: 'required_email' });
+    const required_password = intl.formatMessage({ id: 'required_password' });
+    const error_email = intl.formatMessage({ id: 'error_email' });
+    const error_password = intl.formatMessage({ id: 'error_password' });
+
 
     const validateEmail = () => {
         if (!email) {
-            setEmailError('Email is required');
+            setEmailError(required_email);
         }
         else if (!/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) {
-            setEmailError('Invalid email format');
+            setEmailError(error_email);
         } else {
             setEmailError('');
         }
@@ -28,9 +36,9 @@ function Login() {
 
     const validatePassword = () => {
         if (!password) {
-            setPasswordError('Password is required');
+            setPasswordError(required_password);
         } else if (password.length < 6) {
-            setPasswordError('Password should be at least 6 characters long');
+            setPasswordError(error_password);
         } else {
             setPasswordError('');
         }
@@ -79,7 +87,7 @@ function Login() {
                         {generalError && <div className="error-message">{generalError}</div>}
                         <Form onSubmit={handleSubmit}>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label className='label-form'>Username or Email</Form.Label>
+                                <Form.Label className='label-form'><FormattedMessage id="email" /></Form.Label>
                                 <Form.Control
                                     type="email"
                                     className='form-form'
@@ -91,7 +99,7 @@ function Login() {
                             </Form.Group>
 
                             <Form.Group className="mb-3" controlId="formBasicPassword">
-                                <Form.Label className='label-form'>Password</Form.Label>
+                                <Form.Label className='label-form'><FormattedMessage id="password" /></Form.Label>
                                 <Form.Control
                                     type="password"
                                     className='form-form'
@@ -101,10 +109,10 @@ function Login() {
                                 />
                                 {passwordError && <div className="error-message">{passwordError}</div>}
                             </Form.Group>
-                            <p className='forgotPassword'>Forgot password?</p>
+                            <p className='forgotPassword'><FormattedMessage id="forgot_password" /></p>
                             <div className='d-flex justify-content-center align-items-center'>
                                 <Button variant="primary" type="submit" className='sign-in'>
-                                    Sign in
+                                    <FormattedMessage id="login" />
                                 </Button>
                             </div>
                         </Form>

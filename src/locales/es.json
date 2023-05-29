@@ -1,5 +1,4 @@
 {
-    "loginTitle": "Your Library ",
     "author": "Autor",
     "isbn": "ISBN",
     "publisher": "Editor",
@@ -8,5 +7,13 @@
     "available_online": "Disponible Online",
     "price": "Precio",
     "summary": "Resumen",
-    "yes": "Sí"
+    "yes": "Sí",
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "forgot_password": "Recuperar contraseña",
+    "login": "Ingresar",
+    "required_email": "El Email es requerido",
+    "required_password": "La contraseña es requirida",
+    "error_email": "El email no tiene un formato válido",
+    "error_password": "La contraseña debe tener al menos 6 caracteres"
 }
